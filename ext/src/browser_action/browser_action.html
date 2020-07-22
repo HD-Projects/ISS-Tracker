@@ -14,4 +14,18 @@
 <div id="mainPopup">
 <h1>Hello Mate!</h1>
 <p>Play our game here</p>
+  <button id="buttontoshow" onclick="changeButton"> </button>
+
+
+
+ 
+
+  <script> 
+  var clicks = 0;
+  function changeButton(){
+    clicks = clicks + 1;
+  document.getElementById("buttontoshow").innerHTML = clicks;
+  }
+
+  </script>	
 </div>
