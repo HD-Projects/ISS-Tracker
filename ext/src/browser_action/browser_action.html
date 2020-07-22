@@ -6,38 +6,144 @@
 		width: 400px;
 		font-family: Helvetica, Ubuntu, Arial, sans-serif;
 	}
-	h1 {
-		font-size: 2em;
-	}
-	
-button {
-  padding: 15px;
-  border: 1px solid black;
-  border-radius: 10px;
-  background-color: #2c3e50;
+	body {
+  background-image: url('galaxy.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
   color: white;
-  font-size: 18px;
-  margin: 5px;
-  cursor: pointer;
-  outline: none;
 }
+
+h1 {
+  text-align: center;
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: normal;
+  background-color: black;
+  padding: 10px;
+}
+
+.location-text {
+  margin-bottom: 10px;
+  width: 350px;
+  border: 1px dashed salmon;
+  background-color: black;
+  color: white;
+  margin: auto;
+  text-align: center;
+  font-size: 28px;
+  font-family: 'Big Shoulders Display', cursive;
+  border-radius: 20px;
+}
+
+#lat-value, #long-value {
+  color: salmon;
+}
+
+.animation {
+  width: 700px;
+  height: 400px;
+  margin: auto;
+  position: relative;
+}
+
+#earth {
+  width: 150px;
+  position: absolute;
+  top: 150px;
+  left: 250px;
+}
+
+
+#sattelite {
+  width: 80px;
+}
+
+.total-days {
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+  width: 300px;
+  margin: auto;
+  border: 5px double black;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+.total-days > p {
+  font-style: italic;
+}
+
+.iss{
+  width: 400px;
+  position: absolute;
+  height: 250px;
+  top: 100px;
+  left: 125px;
+  animation: spin 60s infinite;
+}
+
+@keyframes spin{
+
+  from {
+    
+    transform: rotate(0deg);
+  }
+  
+  to {
+     transform: rotate(360deg);
+  }
+
+
+}
+
 </style>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display|Roboto:400,400i&display=swap" rel="stylesheet">
+
 
 <div id="mainPopup">
 <h1>Hello Mate!</h1>
 <p>Play our game here</p>
   <button id="buttontoshow" onclick="changeButton"> </button>
 
+    <h1>International Space Station: Live</h1>
+    <div class="location-info">
+      <div class="animation">
+        <img id="earth" src="earth.png">
+        <div class="iss">
+          <img id="sattelite" src="sattelite.png">
+        </div>
+      </div>
+      
+      <div class="location-text">
+        <p> ISS Location </p>
+        <p> Latitude: <span id="lat-value"> </span> </p>
+        
+        <p> Longitude: <span id="long-value"> </span> </p>
+      </div>
 
+      <div class="total-days">
+        
+        <h3> ISS has been is space for <span id="count"> </span> days </h3>
+
+ <h3> ISS vecloity is <span id="velocity"> </span> ms</h3>
+ <h3> ISS visibility is <span id="visibility"> </span> </h3>
+ <h3> ISS footrpint is <span id="footprint"> </span> square meters </h3>
+ <h3> ISS altitude is  <span id="altitude"> </span> km </h3>
+ <h3> ISS timestamp is <span id="timestamp"> </span>  </h3>
+
+        
+      </div>
+      
+      
+      
+      
+      
+    </div>
+	
+	
 
  
 
-  <script> 
-  var clicks = 0;
-  function changeButton(){
-    clicks = clicks + 1;
-  document.getElementById("buttontoshow").innerHTML = clicks;
-  }
-
-  </script>	
 </div>
