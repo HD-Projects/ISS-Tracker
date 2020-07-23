@@ -1,8 +1,8 @@
-<!doctype html>
+<html>
 <script src="script.js"></script>
 <style type="text/css">
-	
-#mainPopup {   
+
+#mainPopup {
    padding: 10px;
    height: 950px;
    width: 600px;
@@ -86,10 +86,10 @@ h1 {
 @keyframes spin{
 
   from {
-    
+
     transform: rotate(0deg);
   }
-  
+
   to {
      transform: rotate(360deg);
   }
@@ -109,24 +109,25 @@ h1 {
           <img id="sattelite" src="sattelite.png">
         </div>
       </div>
-      
+
       <div class="location-text">
         <p> ISS Location </p>
         <p> Latitude: <span id="lat-value"> </span> </p>
-        
+
         <p> Longitude: <span id="long-value"> </span> </p>
+
+				<div id="googleMap" style="width:100%;height:400px;"></div>
       </div>
 
       <div class="total-days">
-        
+
         <h3> ISS has been is space for <span id="count"> </span> days </h3>
  <h3> ISS vecloity is <span id="velocity"> </span> ms</h3>
  <h3> ISS visibility is <span id="visibility"> </span> </h3>
  <h3> ISS footrpint is <span id="footprint"> </span> square meters </h3>
  <h3> ISS altitude is  <span id="altitude"> </span> km </h3>
- <h3> ISS timestamp is <span id="timestamp"> </span>  </h3>        
+ <h3> ISS timestamp is <span id="timestamp"> </span>  </h3>
       </div>
     </div>
 </div>
-
-
+</html>
